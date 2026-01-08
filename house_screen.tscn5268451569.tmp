@@ -19,7 +19,7 @@ offset_top = -3.0
 offset_right = 639.0
 offset_bottom = 357.0
 script = ExtResource("1_axsfp")
-tween_intensity = 1.2
+tween_intensity = 0.4
 tween_duration = 1.2
 
 [node name="InteriorHouse" type="TextureRect" parent="."]
@@ -45,13 +45,9 @@ offset_bottom = 360.0
 color = Color(0, 0, 0, 1)
 
 [node name="GlowTable" type="Sprite2D" parent="."]
-position = Vector2(307, 219.00002)
-scale = Vector2(0.5700001, 0.6499998)
-texture = ExtResource("4_772ft")
-
-[node name="GlowMusic" type="Sprite2D" parent="."]
-position = Vector2(175, 326)
-scale = Vector2(0.18999997, 0.19312501)
+visible = false
+position = Vector2(309, 215.00002)
+scale = Vector2(0.74, 0.78)
 texture = ExtResource("4_772ft")
 
 [node name="table" type="Button" parent="."]
@@ -74,9 +70,34 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_772ft")
 icon = ExtResource("1_58yi4")
 flat = true
 
+[node name="GlowMusic" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(175, 328)
+scale = Vector2(0.28000006, 0.27250028)
+texture = ExtResource("4_772ft")
+
 [node name="TileMap" parent="." instance=ExtResource("5_v3o71")]
 position = Vector2(31, 27)
 tile_set = SubResource("TileSet_4hbto")
 
-[connection signal="pressed" from="table" to="." method="callMemory"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="score_label" type="Label" parent="CanvasLayer"]
+offset_left = 361.0
+offset_top = 149.0
+offset_right = 524.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 40
+text = "test"
+vertical_alignment = 1
+
+[node name="turns_label" type="Label" parent="CanvasLayer"]
+offset_left = 358.0
+offset_top = 219.0
+offset_right = 521.0
+offset_bottom = 274.0
+theme_override_font_sizes/font_size = 40
+text = "test1"
+vertical_alignment = 1
+
 [connection signal="pressed" from="reproctordemusica" to="." method="callMemory"]

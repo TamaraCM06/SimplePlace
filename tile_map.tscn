@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://bx2kcdo4p4v61"]
+
+[ext_resource type="Texture2D" uid="uid://b7qpnybsjhtly" path="res://assets/house assets/cards.png" id="1_1n30v"]
+[ext_resource type="Script" uid="uid://xy4ust134ln0" path="res://scripts/tile_map.gd" id="2_35kre"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_35kre"]
+texture = ExtResource("1_1n30v")
+texture_region_size = Vector2i(48, 75)
+use_texture_padding = false
+0:0/next_alternative_id = 2
+0:0/0 = 0
+0:0/1 = 1
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_upw0o"]
+resource_local_to_scene = true
+tile_size = Vector2i(48, 75)
+sources/1 = SubResource("TileSetAtlasSource_35kre")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_upw0o")
+format = 2
+layer_0/name = "hidden"
+layer_0/z_index = 5
+layer_1/name = "revealed"
+script = ExtResource("2_35kre")
+
+[node name="@TileMapLayer@54496" type="TileMapLayer" parent="."]
+use_parent_material = true
+position = Vector2(-52, -44)
+tile_set = SubResource("TileSet_upw0o")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="score_label" type="Label" parent="CanvasLayer"]
+offset_left = 361.0
+offset_top = 149.0
+offset_right = 524.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 40
+text = "test"
+vertical_alignment = 1
+
+[node name="turns_label" type="Label" parent="CanvasLayer"]
+offset_left = 358.0
+offset_top = 219.0
+offset_right = 521.0
+offset_bottom = 274.0
+theme_override_font_sizes/font_size = 40
+text = "test1"
+vertical_alignment = 1

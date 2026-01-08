@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://hht8erx60ei7"]
+[gd_scene load_steps=12 format=3 uid="uid://hht8erx60ei7"]
 
 [ext_resource type="Script" uid="uid://ov5dhpm8wevp" path="res://scripts/menu.gd" id="1_kk3ma"]
 [ext_resource type="Texture2D" uid="uid://c10mapl8j3uev" path="res://assets/menu assets/Background.png" id="2_nrnbx"]
@@ -7,6 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://cjxmoeqiokcqo" path="res://assets/menu assets/Park.png" id="6_g7jxm"]
 [ext_resource type="Texture2D" uid="uid://8jbjn27ukxlq" path="res://assets/glow.png" id="7_jspdm"]
 [ext_resource type="Texture2D" uid="uid://dfig4yu6weq1g" path="res://assets/menu assets/Xit.png" id="8_oxnod"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ecwwl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kk3ma"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nrnbx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iqepy"]
 
 [node name="Menu" type="Panel"]
 offset_right = 320.0
@@ -21,45 +29,6 @@ layout_mode = 0
 offset_right = 640.0
 offset_bottom = 360.0
 texture = ExtResource("2_nrnbx")
-
-[node name="House" type="Button" parent="."]
-texture_filter = 1
-layout_mode = 0
-offset_left = 285.0
-offset_top = 177.0
-offset_right = 341.0
-offset_bottom = 217.0
-icon = ExtResource("3_iqepy")
-flat = true
-
-[node name="Bakery" type="Button" parent="."]
-texture_filter = 1
-layout_mode = 0
-offset_left = 20.0
-offset_top = 143.0
-offset_right = 76.0
-offset_bottom = 183.0
-icon = ExtResource("5_dwrpx")
-flat = true
-
-[node name="Park" type="Button" parent="."]
-texture_filter = 1
-layout_mode = 0
-offset_left = 530.0
-offset_top = 236.0
-offset_right = 586.0
-offset_bottom = 276.0
-icon = ExtResource("6_g7jxm")
-flat = true
-
-[node name="Exit" type="Button" parent="."]
-layout_mode = 0
-offset_left = 12.0
-offset_top = 309.0
-offset_right = 52.0
-offset_bottom = 349.0
-icon = ExtResource("8_oxnod")
-flat = true
 
 [node name="GlowHouse" type="Sprite2D" parent="."]
 visible = false
@@ -84,6 +53,49 @@ visible = false
 position = Vector2(32, 330.00003)
 scale = Vector2(0.65, 0.66)
 texture = ExtResource("7_jspdm")
+
+[node name="House" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 285.0
+offset_top = 177.0
+offset_right = 341.0
+offset_bottom = 217.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ecwwl")
+icon = ExtResource("3_iqepy")
+flat = true
+
+[node name="Bakery" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 20.0
+offset_top = 143.0
+offset_right = 76.0
+offset_bottom = 183.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kk3ma")
+icon = ExtResource("5_dwrpx")
+flat = true
+
+[node name="Park" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 530.0
+offset_top = 236.0
+offset_right = 586.0
+offset_bottom = 276.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nrnbx")
+icon = ExtResource("6_g7jxm")
+flat = true
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 309.0
+offset_right = 52.0
+offset_bottom = 349.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_iqepy")
+icon = ExtResource("8_oxnod")
+flat = true
 
 [connection signal="pressed" from="House" to="." method="buttonHousePressed"]
 [connection signal="pressed" from="Bakery" to="." method="buttonBakeryPressed"]
