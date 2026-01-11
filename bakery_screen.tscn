@@ -64,6 +64,7 @@ icon = ExtResource("2_6a3ef")
 flat = true
 
 [node name="Oven" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 392.0
 offset_top = 233.0

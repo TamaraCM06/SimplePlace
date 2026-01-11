@@ -472,6 +472,8 @@ func callOven():
 
 func callDone():
 	ovenOff.visible = false
+	ovenOn.visible = false
+	oven.visible = false
 	done.visible = false
 	exclamationIngredients.visible = true
 	notebook.visible = true
